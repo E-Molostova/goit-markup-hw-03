@@ -19,8 +19,14 @@ body {
 a {
   text-decoration: none;
 }
+
 li {
   list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 /*Logo*/
@@ -30,6 +36,7 @@ li {
   font-size: 26px;
   line-height: 1.2;
 }
+
 .logo-web:hover,
 .logo-web:focus {
   color: var(--accent-color);
@@ -42,35 +49,106 @@ li {
 }
 
 /*Header except logo*/
+
 .site-nav {
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 80px;
 }
-.header .site-nav:hover,
-.header .site-nav:focus {
+
+.site-nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav-list .nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.site-nav:hover,
+.site-nav:focus {
   color: var(--accent-color);
 }
+
 .header .contacts {
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header .contacts:hover {
   color: var(--accent-color);
 }
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-contacts {
+  display: flex;
+}
+
+.site-contacts .contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.site-contacts {
+  margin-left: auto;
+}
+
 /*Section hero*/
 h1 {
   color: var(--title-text-color); /*поменять на белый*/
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.section-hero {
+  text-align: center;
 }
 
 /*Section-advantages*/
+
+.section-advantages {
+  margin-bottom: 94px;
+}
+
+.section-advantages-list {
+  display: flex;
+  justify-content: space-between;
+}
+/*не получается почему? с ласт чайлд*/
+
+.section-advantages-text {
+  width: 270px;
+  height: 75px;
+}
 
 .section-advantages-title {
   color: var(--title-text-color);
@@ -78,20 +156,38 @@ h1 {
   text-transform: uppercase;
   line-height: 1.14;
   font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
+
 .section-advantages p {
   font-size: 14px;
   line-height: 1.71;
+  padding: 0;
+  margin-top: 0;
 }
 
 /*Section-photo*/
+
 .section-photo-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
+
+.section-photo {
+  margin-bottom: 94px;
+}
+
+.section-photo-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*Section-team*/
 
 .section-team {
@@ -102,6 +198,19 @@ h1 {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: var(--secondary-bg-color);
+  margin-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-item {
+  margin-right: 30px;
+}
+/*не получается почему?*/
+.team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section-team-title,
@@ -112,31 +221,45 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.14;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .section-team-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17x;
+  line-height: 1.17;
+  margin-top: 94px;
+  margin-bottom: 50px;
+  display: inline-block;
 }
 .section-team-profession {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /*Footer*/
+
 .footer {
   background-color: #2f303a;
   line-height: 1.71;
+  height: 252px;
+  padding-top: 60px;
+  padding-left: 215px;
 }
 .address {
   color: var(--primary-white-color);
   font-style: normal;
   letter-spacing: 0.03em;
+  padding-top: 20px;
+  padding-bottom: 9px;
 }
 .footer .contacts {
   color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 9px;
 }
 .footer .logo-studio {
   color: var(--primary-white-color);
@@ -157,6 +280,12 @@ h1 {
   text-decoration: none;
   letter-spacing: 0.06em;
   cursor: pointer;
+  display: inline-block;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+  text-align: center;
 }
 
 .button-hover {
@@ -166,6 +295,11 @@ h1 {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  text-align: center;
+  border: transparent;
 }
 
 .button-hover:hover {
@@ -179,21 +313,63 @@ h1 {
   letter-spacing: 0.06em;
   cursor: pointer;
 }
+
 /*Portfolio*/
+
+.portfolio {
+  margin-bottom: 94px;
+}
+
 .portfolio-example {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+  margin-top: 20px;
+  margin-bottom: 0;
 }
+
 .portfolio-type {
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
 
 .studio-color,
 .portfolio-color {
   color: var(--accent-color);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: 370px;
+  height: 404px;
+}
+
+.portfolio-item {
+  margin-right: 30px;
+}
+
+.portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-btn-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-btn {
+  margin-bottom: 34px;
+}
+
+.portfolio-btn:not(:last-child) {
+  margin-right: 8px;
 }
