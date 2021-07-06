@@ -118,6 +118,10 @@ ul {
   margin-left: auto;
 }
 
+.header {
+  border: 1px solid #e5e5e5;
+}
+
 /*Section hero*/
 h1 {
   color: var(--title-text-color); /*поменять на белый*/
