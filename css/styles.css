@@ -123,21 +123,33 @@ ul {
 }
 
 /*Section hero*/
-h1 {
-  color: var(--title-text-color); /*поменять на белый*/
+.hero-title {
+  color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  margin-top: 0;
+  text-transform: uppercase;
+  padding-top: 200px;
   margin-bottom: 40px;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-hero {
   text-align: center;
+  background-color: #2f303a;
+  height: 600px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /*Section-advantages*/
+
+.advantages-title {
+  opacity: 0;
+}
 
 .section-advantages {
   margin-bottom: 94px;
@@ -203,6 +215,8 @@ h1 {
   letter-spacing: 0.03em;
   background-color: var(--secondary-bg-color);
   margin-bottom: 94px;
+  padding-left: 215px;
+  padding-right: 215px;
 }
 
 .team-list {
@@ -245,6 +259,12 @@ h1 {
   margin-bottom: 30px;
 }
 
+.section-team-name-prof {
+  background-color: var(--primary-white-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 /*Footer*/
 
 .footer {
@@ -252,7 +272,6 @@ h1 {
   line-height: 1.71;
   height: 252px;
   padding-top: 60px;
-  padding-left: 215px;
 }
 .address {
   color: var(--primary-white-color);
@@ -303,7 +322,6 @@ h1 {
   border-radius: 4px;
   padding: 6px 22px;
   text-align: center;
-  border: transparent;
 }
 
 .button-hover:hover {
