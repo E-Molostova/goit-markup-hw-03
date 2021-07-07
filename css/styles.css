@@ -57,11 +57,8 @@ ul {
   letter-spacing: 0.02em;
 
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   margin-top: 0;
   margin-bottom: 0;
-  height: 80px;
 }
 
 .site-nav-list {
@@ -113,6 +110,7 @@ ul {
 .main-nav {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .site-contacts {
   margin-left: auto;
@@ -120,6 +118,7 @@ ul {
 
 .header {
   border: 1px solid #e5e5e5;
+  height: 80px;
 }
 
 /*Section hero*/
@@ -130,7 +129,6 @@ ul {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 200px;
   margin-bottom: 40px;
   max-width: 696px;
   margin-left: auto;
@@ -140,9 +138,10 @@ ul {
 .section-hero {
   text-align: center;
   background-color: #2f303a;
-  height: 600px;
   max-width: 1600px;
   margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /*Section-advantages*/
@@ -309,6 +308,7 @@ ul {
   border-radius: 4px;
   min-width: 200px;
   text-align: center;
+  border: none;
 }
 
 .button-hover {
